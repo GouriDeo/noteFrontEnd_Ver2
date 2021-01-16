@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SignUp</title>
+</head>
+<body>
+    <form [formGroup]="registerForm" (ngSubmit)="register()">
+        <div class="signup">
+            <div class="title">
+                SignUp
+            </div>
+            <div class="form">
+                <div class="inputFiels">
+                    <input type="text" placeholder="Username" name="name" id="userName" class="input" required formControlName="name">
+                </div>
+                <div class="inputFiels">
+                    <input type="text" placeholder="Email" name="email" class="input" required formControlName="email">
+                </div>
+                <div class="inputFiels">
+                    <input type="password" placeholder="Password" name="password" class="input" required formControlName="password">
+                </div>
+                <div class="button">
+                    <input type="submit" value="SignUp" class="btn_sign">
+                    <p>Or continue with</p>
+                </div>
+                <div class="social">
+                    <button type="button"  style="border: none; background: none; padding: none;">
+                        <img src="../../../assets/google-logo (1).png" style="width: 50px; height: 50px; margin-right:10px;">
+                    </button>
+                    <button type="button"  style="border: none; background: none; padding: none;">
+                        <img src="../../../assets/facebook.png" style="width: 50px; height:50px;">
+                    </button>
+                </div>
+                <div class="signin">
+                    <p>Already a user? <a [routerLink]= "'/login'">SignIn</a></p>
+                </div>
+
+            </div>
+        </div>
+    </form>
+</body>
+</html>
